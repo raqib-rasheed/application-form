@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey-Form</title>
+    <link rel="stylesheet" href="./form.css">
+</head>
+<body>
+    <section>
+        <header >
+            <h1 id="title">
+                Job application form
+            </h1>
+                <p id="description">
+                    NB:The details you enter shold be double-checked and valid.
+                </p>
+            </header>
+    </section>
+    <main>
+        <form id="survey-form">
+            <label for="enter-name" id="name-label">Name</label>
+            <input id="name" type="text" required minlength="4" maxlength="12" placeholder="Enter your name here">
+            <label for="enter-email" id="email-label">E-mail</label>
+            <input id="email" type="email" pattern=".+@" required placeholder="Enter e-mail">
+            <label for="enter-number" id="number-label">Number</label>
+            <input id="number" type="number" placeholder="Enter Number" max="100" min="1">
+            <label for="select-gender" id="dropdown">Select Gender</label>
+            <select name="Gender" id="dropdown">
+                <option value="select-any">select any</option>
+                <option value="male">male</option>
+                <option value="fe-male">fe-male</option>
+                <option value="other">other</option>
+            </select>
+            <div>
+                <p id="occupation">occupation</p>
+                <input type="radio" id="employed" name="occupation" value="employed" checked>
+                <label for="employed">Employed</label>
+            </div>
+            <div>
+                <input type="radio" id="un-employed" name="occupation" value="un-employed">
+                <label for="unemployed">Employed</label>
+            </div>
+            <div>
+                <input type="radio" id="student" name="occupation" value="student">
+                <label for="student">student</label>
+            </div>
+            <div>
+                <input type="radio" id="other" name="occupation" value="other">
+                <label for="other">Other</label>
+            </div>
+            <label for="more-about yourself">tell us more-about you!</label>
+            <textarea id="moreDetails" name="more-about yourself" rows="4" cols="25">Type here...</textarea>
+        <div class="checkbox">
+            <div>
+                <label for="marital-status">single</label>
+                <input type="checkbox" id="maritalStatus" name="marital-status" value="single">
+            </div>
+            <div>
+                <label for="marital-status">Married</label>
+                <input type="checkbox" id="maritalStatus" name="marital-status" value="single">        
+            </div>
+        </div>
+            <button id="submit">submit</button>
+        </form>
+    </main>
+</body>
+</html>
